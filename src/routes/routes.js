@@ -1,6 +1,7 @@
 const express = require("express");
 
 const router = express.Router();
+const auth = require("../middleware/authorisation.js");
 //middlewares
 
 //controllers
@@ -35,7 +36,7 @@ const {
 } = require("../controllers/main.js");
 
 //routes
-router.get("/api/vendor/all", allVendors);
+router.get("/api/vendor/all", auth("admin"), allVendors);
 router.get("/api/vendor/:vendorId/orders/live", getLiveOrders);
 router.get("/api/vendor/:vendorId/orders/complete", getCompleteOrders);
 router.get("/api/item/:itemId", getItem);
