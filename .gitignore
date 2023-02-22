@@ -1,3 +1,4 @@
+(base) sooryasrajan@Sooryas-MacBook-Pro test % cat .gitignore 
 # Logs
 logs
 *.log
@@ -102,7 +103,6 @@ dist
 
 # vuepress v2.x temp and cache directory
 .temp
-.cache
 
 # Docusaurus cache and generated files
 .docusaurus
@@ -128,3 +128,4 @@ dist
 .yarn/build-state.yml
 .yarn/install-state.gz
 .pnp.*
+.idea
